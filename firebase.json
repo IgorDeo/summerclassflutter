@@ -1,0 +1,30 @@
+{
+    "flutter": {
+        "platforms": {
+            "android": {
+                "default": {
+                    "projectId": "summerclass-bad89",
+                    "appId": "1:265076212231:android:771a4549e0fa46b0dc20a2",
+                    "fileOutput": "android/app/google-services.json"
+                }
+            },
+            "ios": {
+                "default": {
+                    "projectId": "summerclass-bad89",
+                    "appId": "1:265076212231:ios:2f7becf579fd5883dc20a2",
+                    "uploadDebugSymbols": false,
+                    "fileOutput": "ios/Runner/GoogleService-Info.plist"
+                }
+            },
+            "dart": {
+                "lib/firebase_options.dart": {
+                    "projectId": "summerclass-bad89",
+                    "configurations": {
+                        "android": "1:265076212231:android:771a4549e0fa46b0dc20a2",
+                        "ios": "1:265076212231:ios:2f7becf579fd5883dc20a2"
+                    }
+                }
+            }
+        }
+    }
+}

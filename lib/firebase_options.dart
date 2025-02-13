@@ -3,6 +3,7 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -26,10 +27,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for ios - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return ios;
       case TargetPlatform.macOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for macos - '
@@ -52,11 +50,21 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAF62UgEaOmmf84LWgqxHPLSgo6gwb1Ihs',
-    appId: '1:265680468540:android:d534d5ac97db24ae04a139',
-    messagingSenderId: '265680468540',
-    projectId: 'summerclass-56cf2',
-    storageBucket: 'summerclass-56cf2.appspot.com',
-  );
+  static FirebaseOptions get android => FirebaseOptions(
+        apiKey: dotenv.env['ANDROID_API_KEY'] ?? '',
+        appId: dotenv.env['ANDROID_APP_ID'] ?? '',
+        messagingSenderId: dotenv.env['ANDROID_MESSAGING_SENDER_ID'] ?? '',
+        projectId: dotenv.env['ANDROID_PROJECT_ID'] ?? '',
+        storageBucket: dotenv.env['ANDROID_STORAGE_BUCKET'] ?? '',
+      );
+
+  static FirebaseOptions get ios => FirebaseOptions(
+        apiKey: dotenv.env['IOS_API_KEY'] ?? '',
+        appId: dotenv.env['IOS_APP_ID'] ?? '',
+        messagingSenderId: dotenv.env['IOS_MESSAGING_SENDER_ID'] ?? '',
+        projectId: dotenv.env['IOS_PROJECT_ID'] ?? '',
+        storageBucket: dotenv.env['IOS_STORAGE_BUCKET'] ?? '',
+        iosClientId: dotenv.env['IOS_CLIENT_ID'] ?? '',
+        iosBundleId: dotenv.env['IOS_BUNDLE_ID'] ?? '',
+      );
 }

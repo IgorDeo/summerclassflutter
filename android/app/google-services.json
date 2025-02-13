@@ -1,26 +1,43 @@
 {
   "project_info": {
-    "project_number": "265680468540",
-    "project_id": "summerclass-56cf2",
-    "storage_bucket": "summerclass-56cf2.appspot.com"
+    "project_number": "265076212231",
+    "project_id": "summerclass-bad89",
+    "storage_bucket": "summerclass-bad89.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:265680468540:android:d534d5ac97db24ae04a139",
+        "mobilesdk_app_id": "1:265076212231:android:771a4549e0fa46b0dc20a2",
         "android_client_info": {
           "package_name": "com.example.summerclass"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "265076212231-c7isf5j3sjmm15onlr94u1kbvqbmp5l9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyAF62UgEaOmmf84LWgqxHPLSgo6gwb1Ihs"
+          "current_key": "AIzaSyAUkevzj9iBo9f4snIi2iuatxMTFnZDxU8"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "265076212231-c7isf5j3sjmm15onlr94u1kbvqbmp5l9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "265076212231-g380eao9j3sc20lgm6pcdqo01gkcf66o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.summerclass"
+              }
+            }
+          ]
         }
       }
     }
